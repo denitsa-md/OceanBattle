@@ -1,0 +1,83 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 23, 2015, 4:41:50 PM
+    Author     : Atanas Kazakov
+
+*/
+
+#all{
+    padding-top:2em;
+    margin-left: 2em;
+
+}
+
+#myGame {
+
+    float:left;
+    margin-right:1em;
+}
+
+
+#myDashboard {
+    background-color: black;
+    float:left;
+    width: 300px;
+    height: 600px;
+    background-color: #3153AE;
+}
+
+.label {
+   padding-left:1em;
+}
+
+.whiteFont{
+    color:white;
+}
+
+td {
+    width: 50%;
+}
+
+/*Level Dash*/
+#levelDash, #livesDash {
+    background-color: #323F40;
+}
+
+/*Score Dash*/
+#score, #level {
+    font-size: 150%;
+    font-weight: bold;
+}
+
+
+
+/*Torpedoes Dash*/
+
+#torpedoes {
+    width:35%;
+    margin-left: 15px;
+}
+
+#torpedoes img{
+    margin-right: 5px;
+    margin-left:5px;
+}
+
+#torpedoesText {
+    font-size: 140%;
+}
+
+/*Lives Dash*/
+#lives img{
+   padding: 5px; 
+}
+
+/*Hint*/
+#hint {
+    font-size:150%;
+    padding: 2em;
+}

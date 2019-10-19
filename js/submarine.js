@@ -90,7 +90,6 @@
         stage.addChild(start);
 
         if (getCurrentLevel() === 1) {
-           canvasDOM.one("keypress", preload);
             $(window).on("keydown", preload);
         } else {
             preload();

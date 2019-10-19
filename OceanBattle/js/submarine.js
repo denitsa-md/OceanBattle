@@ -78,7 +78,7 @@
     function init() {
 
         var canvas = document.getElementById('myGame');
-//        var context = canvas.getContext('2d');
+        // var context = canvas.getContext('2d');
         canvas.width = WIDTH;
         canvas.height = HEIGHT;
         canvas.setAttribute("tabindex", 0);
@@ -87,19 +87,14 @@
         startImage = new createjs.LoadQueue(true);
         startImage.on("complete", loadStartScreen, this);
         startImage.loadFile({id:"startImage", src:"images/start.png"});
-
-        console.log(start);
         stage.addChild(start);
 
-       
-
         if (getCurrentLevel() === 1) {
-//            canvasDom.one("keypress", preload);
-            $(window).on("keydown", preload);     
+           canvasDOM.one("keypress", preload);
+            $(window).on("keydown", preload);
         } else {
             preload();
         }
-
       }
 
       function loadStartScreen(event) {
@@ -120,10 +115,9 @@
         preloadText.x = stage.canvas.width/2;
         preloadText.y = stage.canvas.height/2;
         stage.removeChild(start);
-        stage.addChild(preloadText);
-        
+
         manifest = [
-//Load images
+        //Load images
             {id:"background", src:"images/background.jpg"},
             {id:"submarine", src:"images/submarine.png"},
             {id:"enemy1", src:"images/ship1.png"},
@@ -146,20 +140,14 @@
             {id:"winAlifeSound", src:"sounds/winAlife.mp3"},             
             {id:"winSound", src:"sounds/winSound.mp3"}
         ]
- //Load sounds
-
-          
-        queue = new createjs.LoadQueue(true); 
+        //Load sounds
+        queue = new createjs.LoadQueue(true);
         createjs.Sound.alternateExtensions = ["ogg"];
         queue.installPlugin(createjs.Sound);
         queue.on("fileload", handleFileLoad, this);
         queue.on("progress", progress, this);
         queue.on("complete", gameLoaded, this);
         queue.loadManifest(manifest);
-
-       
-       
-
 }
 
      function handleFileLoad(event) {
@@ -175,9 +163,7 @@
            stage.addChild(bgBitmap);
            stage.update();
         } else if (id.indexOf("enemy") >=0){
-            enemiesImg.push(item);  
-    //        console.log(
-    //                item);
+            enemiesImg.push(item);
         } else if (id === "explosionSprite") {
             explosionSpriteData = {
                 images: [queue.getResult("explosionSprite")],
@@ -191,37 +177,32 @@
                     }       
                 } 
             };
-             console.log("entered");
             explosionSprite = new createjs.SpriteSheet(explosionSpriteData);
         }
 
      }
 
     function progress(e) {
-    //    canvasDOM.classList.remove('bg');
-//        var percent = Math.round(e.progress*100);
-//        stage.addChild(preloadText);
-//        preloadText.text = "Loading..." + percent + "% \nPlease wait.";
-//        setTimeout(stage.update(), 2000);
-       // stage.update();
+      canvasDOM[0].classList.remove('bg');
+      var percent = e.progress < 1 ? Math.round(e.progress*100) : 100;
+      stage.addChild(preloadText);
+      preloadText.text = "Loading..." + percent + "% \nPlease wait.";
+      setTimeout(stage.update(), 2000);
+      stage.removeChild(preloadText);
      }
 
     function gameLoaded() {
+        bgBitmap = new createjs.Bitmap(queue.getResult("background"));
+        bgBitmap.name = "imageBackground";
+        stage.addChild(bgBitmap);
+        stage.update();
 
-    //    bgBitmap = new createjs.Bitmap(queue.getResult("background"));
-    //    bgBitmap.name = "imageBackground";
-    //    stage.addChild(bgBitmap);
-    //    stage.update();
-        stage.removeChild(preloadText);
-      //  console.log(stage.removeChild(preloadText));
         sonarSound = createjs.Sound.play("sonarSound");
         stage.update();
         
         createjs.Ticker.setFPS(30);
-        
         createjs.Ticker.addEventListener('tick', tick);
        
-        
         window.onkeyup = keyUp;
         window.onkeydown = keyDown;
         Submarine = submarineClass.create();
@@ -235,8 +216,6 @@
         updateScoreDashboard();
         loadTorpedoes();
         updateLives(lives);
-
-
     }
 
 
@@ -294,7 +273,6 @@ var firstShotMade = false;
         } 
     };
 
-
     /***--- Submarine Torpedos ---***/
     var torpedoClass = {
         moveTorpedos: function() {
@@ -316,7 +294,6 @@ var firstShotMade = false;
                           if (hitTest(torpedo, enemy)) {
                               var explosionSound = createjs.Sound.play("explosionSound");
                               if ((lives < 3) && enemy.givesLife) {
-                                  console.log("givesLife"+enemy.givesLife);
                                   addLife();
                                   lives++;
                               } else {
@@ -342,9 +319,6 @@ var firstShotMade = false;
             explosion.y = torpedo.y-5;
             stage.addChild(explosion);        
         }
-
-
-
     };
 
     /***--- Enemy Ships ---***/
@@ -362,7 +336,6 @@ var firstShotMade = false;
                         if (enemy.id === "enemy1") {
                             temp = this.createEnemy1(temp);
                         }
-                        console.log("enemy.id" + enemy.id);
                         stage.addChild(temp);
                         currTick = ticking;
                         enemies.push(temp);
@@ -370,8 +343,6 @@ var firstShotMade = false;
                     //Level 2 enemies    
                     case 2:
                         enemy = enemiesImg[Math.floor(Math.random()*enemiesImg.length-1)];
-                        console.log("length" + enemiesImg.length);
-                        console.log(enemy);
 
                         temp = new createjs.Bitmap(enemy.src);
                         if (enemy.id === "enemy1") {
@@ -379,7 +350,6 @@ var firstShotMade = false;
                         } else if (enemy.id === "enemy2") {
                             temp = this.createEnemy2(temp);
                         } 
-                        console.log("enemy.id" + enemy.id);
                         stage.addChild(temp);
                         currTick = ticking;
                         enemies.push(temp);
@@ -387,7 +357,6 @@ var firstShotMade = false;
                     //Level 3 enemies
                     case 3:
                         enemy = enemiesImg[Math.floor(Math.random()*enemiesImg.length)];
-                        console.log("enemy.id" + enemy.id);
                         temp = new createjs.Bitmap(enemy.src);
                         if (enemy.id === "enemy1") {
                             temp = this.createEnemy1(temp);
@@ -396,7 +365,6 @@ var firstShotMade = false;
                         } else if (enemy.id === "enemy3") {
                             temp = this.createEnemy3(temp);
                         }
-                        console.log("enemy.id" + enemy.id);
                         stage.addChild(temp);
                         currTick = ticking;
                         enemies.push(temp);
@@ -496,7 +464,6 @@ var firstShotMade = false;
                         var underwaterBomb = createjs.Sound.play("underwaterBomb");    
                         underwaterBomb.volume = 1;
                         lives--;
-                        console.log("lives"+lives);
                         updateLives(lives);
                         stage.removeChild(mine);
                        // stage.addChild(Submarine);
@@ -506,15 +473,12 @@ var firstShotMade = false;
                         }, 3000);
                 }
                 }
-
             }
         }
        
     };
 
     /***--- Enemy Planes ---***/
-
-
 
     /***--- Utilities ---***/
 
@@ -598,12 +562,11 @@ var firstShotMade = false;
                 var winSound = createjs.Sound.play("winSound"); 
                 stopGame();
             }
-            console.log("levelToStore" + levelToStore);
             level = levelToStore;
             levelDOM.text(getCurrentLevel());
             score = 0;
             scoreField.text(score +"/30");
-        //    window.location.reload(false);
+            window.location.reload(false);
          }
     }
 
@@ -623,6 +586,7 @@ var firstShotMade = false;
                 break;    
             case 1:
                 $("#torpedoes img:last-child").remove();
+                stage.update();
                 break;
         }
     }
@@ -701,12 +665,10 @@ var firstShotMade = false;
             stage.update();
             addButton.on("click", reset);
             function reset(e) {
-                    console.log("reset");
                     location.reload(true);
                     stage.update();
             }
     }
-
 
     var ticking = 0;
     function tick(e){

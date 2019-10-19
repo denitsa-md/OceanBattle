@@ -2,7 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c3e6e4d-cdc3-47c3-bcbd-d24fd875c7cf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/OceanBattle/js/submarine.js" beforeDir="false" afterPath="$PROJECT_DIR$/OceanBattle/js/submarine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/css/normalize.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/css/submarine.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/images/Plane1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/images/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/images/explosionSprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/images/gameOver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/images/heart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/images/heart1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/images/mine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/images/mine1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/images/plane.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/images/ship1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/images/ship2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/images/splash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/images/start.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/images/submarine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/images/success.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/images/torpedo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/images/torpedoDash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/images/trash/Ship3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/images/trash/battlebatleship1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/images/trash/battlebatleship2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/images/trash/plane1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/images/trash/submarine1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/js/submarine.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/sounds/backgroundMusic.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/sounds/backgroundMusic.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/sounds/explosion.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/sounds/explosion.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/sounds/gameOver.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/sounds/gameOver.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/sounds/sonar.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/sounds/sonar.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/sounds/torpedoShot.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/sounds/torpedoShot.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/sounds/underwaterBomb.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/sounds/underwaterBomb.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/sounds/winAlife.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/sounds/winAlife.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/sounds/winSound.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OceanBattle/sounds/winSound.ogg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +55,7 @@
     <session id="1166648796">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -45,15 +87,6 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/OceanBattle/js/submarine.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="588" column="31" selection-start-line="588" selection-start-column="31" selection-end-line="588" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="297">
@@ -120,11 +153,6 @@
               <item name="OceanBattle" type="b2602c69:ProjectViewProjectNode" />
               <item name="OceanBattle" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="OceanBattle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OceanBattle" type="462c0819:PsiDirectoryNode" />
-              <item name="OceanBattle" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -159,12 +187,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571502864544</updated>
-      <workItem from="1571502865863" duration="2095000" />
+      <workItem from="1571502865863" duration="2694000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2095000" />
+    <option name="totallyTimeSpent" value="2694000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -198,17 +226,17 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="619" column="4" selection-start-line="619" selection-start-column="4" selection-end-line="619" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OceanBattle/js/submarine.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="556">
           <caret line="588" column="31" selection-start-line="588" selection-start-column="31" selection-end-line="588" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="619" column="4" selection-start-line="619" selection-start-column="4" selection-end-line="619" selection-end-column="4" />
         </state>
       </provider>
     </entry>
